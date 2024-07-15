@@ -1,0 +1,20 @@
+body {
+  padding: 0px 20px;
+}
+.allChats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.chats {
+  padding: 20px;
+  background-color: rgba(172, 241, 155, 0.904);
+  border-radius: 10px;
+}
+
+.message {
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 16px;
+}

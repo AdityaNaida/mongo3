@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Chats</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>All Chats</h1>
+    <form action="/chats/new" method="get">
+      <button>create chat</button>
+    </form>
+    <br />
+    <section class="allChats">
+      <% for(let chat of chats){ %>
+      <div class="chats">
+        <p>From : <i><%= chat.from %></i></p>
+        <div class="message">
+          <p>Message: <%= chat.msg %></p>
+        </div>
+        <p>Recived by: <i><%= chat.to %></i></p>
+        <hr />
+        <p><%= chat.date.toString().split(" ")[4] %></p>
+        <p><%= chat.date.toString().split(" ").slice(0, 4).join(" ") %></p>
+      </div>
+      <% } %>
+    </section>
+  </body>
+</html>
