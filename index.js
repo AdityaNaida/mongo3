@@ -76,6 +76,15 @@ app.put("/chats/:id", async (req, res) => {
   res.redirect("/chats");
 });
 
+//Destroy Route
+
+app.delete("/chats/:id", async (req, res) => {
+  const { id } = req.params;
+  const deletedChat = await Chat.findByIdAndDelete(id);
+  console.log(deletedChat);
+  res.redirect("/chats");
+});
+
 app.get("/", (req, res) => {
   res.send("Root is working");
 });

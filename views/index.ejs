@@ -18,7 +18,12 @@
         <form action="chats/<%=chat._id%>/edit" method="get">
           <button>Edit chat</button>
         </form>
-        <form action="post" action="chats/<%=chat._id%>?_method=DELETE">
+        <form
+          action="chats/<%=chat._id%>?_method=DELETE"
+          method="post"
+          id="deleteChats"
+          onsubmit="validateForm(event)"
+        >
           <button>Delete Chat</button>
         </form>
         <p>From : <i><%= chat.from %></i></p>
@@ -32,5 +37,7 @@
       </div>
       <% } %>
     </section>
+
+    <script defer src="/script.js"></script>
   </body>
 </html>
