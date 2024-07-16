@@ -15,6 +15,12 @@
     <section class="allChats">
       <% for(let chat of chats){ %>
       <div class="chats">
+        <form action="chats/<%=chat._id%>/edit" method="get">
+          <button>Edit chat</button>
+        </form>
+        <form action="post" action="chats/<%=chat._id%>?_method=DELETE">
+          <button>Delete Chat</button>
+        </form>
         <p>From : <i><%= chat.from %></i></p>
         <div class="message">
           <p>Message: <%= chat.msg %></p>
