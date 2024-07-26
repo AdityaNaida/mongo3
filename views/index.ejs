@@ -26,6 +26,9 @@
         >
           <button>Delete Chat</button>
         </form>
+        <form action="/chats/<%=chat._id%>" method="get">
+          <button>Show</button>
+        </form>
         <p>From : <i><%= chat.from %></i></p>
         <div class="message">
           <p>Message: <%= chat.msg %></p>
